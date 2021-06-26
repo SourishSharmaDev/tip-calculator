@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="ans">
+          <b>{{symbol+ans}}</b><span v-show="totPeople >= 2"> each</span>
+      </div>
+      <label>Total Price</label>  
+      <input type="number" class="price" v-model="totalPrice" ref="totalPrice"/>
+      <br /><br>
+      <label>Service Rating</label>
+      <select v-model="percentage" class="drop-down">
+        <option class="opt" value="5">Bad</option>
+        <option class="opt" value="10">Ok</option>
+        <option class="opt" value="15">Amazing</option>
+      </select>
+      <br>
+      <label>Number of People</label> 
+      <input type="number" class="price" v-model="totPeople" />
+      <br>
+      <button @click="findPercent" class="but">Tip</button>
+      
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
